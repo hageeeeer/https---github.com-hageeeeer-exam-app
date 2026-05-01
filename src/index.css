@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+@import "tailwindcss";
+@import "tailwindcss";
+@import "@heroui/styles";
+
+
+.active{
+  @apply bg-blue-500 text-white font-bold
+}
+
+
+@media (max-width: 600px) {
+  
+th{
+  display: none;
+}
+  /* كل row تبقى flex container */
+  tr { display: flex;flex-wrap: wrap; gap: 10px; }
+
+  /* كل cell تبقى block */
+  td { display: block; border: none; width: 100%;  }
+}
+
+body{
+    font-family: "Geist Mono", monospace;
+}
+
+
+@layer utilities{
+  .wrapper{
+    @apply px-4 py-8
+  }
+}
+
+/* reset haeding tags */
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-semibold;
+  }
+  h4 {
+    @apply text-lg font-semibold;
+  }
+  h5 {
+    @apply text-base font-medium;
+  }
+  h6 {
+    @apply text-sm font-medium;
+  }
+}
+
+@theme {
+ 
+    --color-custom-blue-50: #eff6ff;
+    --color-custom-blue-100: #dbeafe;
+    --color-custom-blue-200: #bedbff;
+    --color-custom-blue-300: #8ec5ff;
+    --color-custom-blue-400: #50a2ff;
+    --color-custom-blue-500: #2b7fff;
+    --color-custom-blue-600: #155dfc;
+    --color-custom-blue-700: #cc3a5b;
+    --color-custom-blue-800: #193cb8;
+    --color-custom-blue-900: #1c398e;
+    --color-custom-blue-950: #162456;
+
+
+   /* gray */
+    --color-custom-gray-400: #9CA3AF;
+
+
+
+    /* green */
+    --color-custom-green-500: #00BC7D;
+   
+
+
+
+    --color-custom-red-50: #fef2f2;
+    --color-custom-red-100: #fee2e2;
+    --color-custom-red-200: #fecaca;
+    --color-custom-red-300: #fca5a5;
+    --color-custom-red-400: #f87171;
+    --color-custom-red-500: #ef4444;
+    --color-custom-red-600: #dc2626;
+    --color-custom-red-700: #dc2626;
+    --color-custom-red-800: #991b1b;
+    --color-custom-red-900: #7f1d1d;
+    --color-custom-red-950: #450a0a;
+  
+}
