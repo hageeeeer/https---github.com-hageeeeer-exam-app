@@ -9,14 +9,16 @@ import ProgressBarCom from "../../../components/ProgressBarCom";
 export default function Result() {
   const [searchParams] = useSearchParams();
   const [page, setPageNum] = useState(0);
-  const correct = searchParams.get("score");
-  const total = searchParams.get("total");
+ const correct = Number(searchParams.get("score"));
+const total = Number(searchParams.get("total"));
   const examId = searchParams.get("examId");
   const { data } = useQuery({
     queryKey: ["questionDetail", examId],
     queryFn: () => getQuestionsOnExam(examId),
   });
 
+
+  
   return (
     <div className="flex items-center my-5 ">
       <div className="lg:w-1/3 flex items-center flex-col justify-center">
